@@ -1,28 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
+/* more headers goes there */
 
 /**
- *  * main - Entry point
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int d;
+	int i;
+	int j;
+	int k;
 
-	for (d = 0; d < 100; d++)
+	k = '1';
+	for (i = '0'; i <= '9'; i++)
 	{
-		putchar((d / 10) + '0');
-		putchar((d % 10) + '0');
-		if (d != 99)
+		for (j = k; j <= '9'; j++)
 		{
+			putchar(i);
+			putchar(j);
+			if (i == '8' && j == '9')
+				break;
 			putchar(',');
 			putchar(' ');
 		}
+		k++;
 	}
 	putchar('\n');
-
 	return (0);
 }
