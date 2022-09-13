@@ -7,16 +7,14 @@
  */
 int main(void)
 {
-	char *str = "_putchar";
-	int i = 0;
+	int str[] = {45, 112, 117, 116, 99, 104, 97, 114};
+	int i, size;
 
-	while (1)
+	size = sizeof(str) / sizeof(int);
+	for (i = 0; i < size; i++)
 	{
 		_putchar(str[i]);
-		if (i == 7)
-			break;
-		i++;
 	}
-	_putchar(10);
+	_putchar('\n');
 	return (0);
 }
