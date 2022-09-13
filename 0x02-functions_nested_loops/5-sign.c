@@ -2,7 +2,7 @@
 
 /**
  * print_sign - Checks sign of character
- * @n: Receives a character argument
+ * @n: Receives an argument that is an integer
  *
  * Return: int
  */
