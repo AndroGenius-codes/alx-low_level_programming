@@ -5,21 +5,25 @@
  * @a: first integer
  * @b: second integer
  * @c: third integer
- *
  * Return: largest number
  */
 
-long largest_number(long a, long b, long c)
+int largest_number(int a, int b, int c)
 {
-	int largest_N;
+	int largest;
 
-	if (a > b)
-		largest_N = a;
-	else (b > a)
-		largest_N = b;
+	if (a >= b && a >= c)
+	{
+		largest = a;
+	}
+	else if (b >= a && b >= c)
+	{
+		largest = b;
+	}
+	else
+	{
+		largest = c;
+	}
 
-	if (largest_N < c)
-		largest_N = c;
-
-	return (largest_N);
+	return (largest);
 }
