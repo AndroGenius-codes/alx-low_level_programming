@@ -12,7 +12,7 @@ int main(void)
 
 	size = sizeof(str) / sizeof(int);
 	for (i = 0; i < size; i++)
-        {
+	{
 		_putchar(str[i]);
 	}
 	_putchar('\n');
