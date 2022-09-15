@@ -15,14 +15,14 @@ int main(void)
 	long a_head, a_tail, b_head, b_tail, sum_head, sum_tail;
 
 	printf("1");
-	for (counter = 2; counter < 93; counter++) 
+	for (counter = 2; counter < 93; counter++)
 	{
 		sum = a + b;
 		a = b;
 		b = sum;
 		printf(", %lu", sum);
 	}
-	a_head = a / 1000000000; /* break larger num into 2 parts */
+	a_head = a / 1000000000;
 	a_tail = a % 1000000000;
 	b_head = b / 1000000000;
 	b_tail = b % 1000000000;
