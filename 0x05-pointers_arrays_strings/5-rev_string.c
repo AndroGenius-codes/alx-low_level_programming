@@ -21,5 +21,5 @@ void rev_string(char *s)
 		j++;
 	}
 	str_copy[strlen(s)] = '\0';
-	strcopy(s, str_copy);
+	strcpy(s, str_copy);
 }
