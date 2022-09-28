@@ -40,7 +40,7 @@ int is_prime_number(int num)
 
 int i;
 
-I = 2;
+i = 2;
 
 if (num < 2)
 {
