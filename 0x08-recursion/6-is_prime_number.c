@@ -3,6 +3,7 @@
 /**
  *evaluate_num - recursion loop
  *@num: num
+ *@i: iterator
  *Return: return 1 or 0
  */
 
