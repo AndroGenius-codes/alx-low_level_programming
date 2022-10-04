@@ -1,37 +1,34 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * alloc_grid - returns a pointer to a 2 dimensional array of integers.
- * @width: width of the array.
- * @height: height of the array.
- * Return: pointer of array of integers.
+ * str_concat - concatenates two strings.
+ * @s1: first string.
+ * @s2: second string.
+ * Return: pointer of an array of chars.
  **/
-int **alloc_grid(int width, int height)
+char *str_concat(char *s1, char *s2)
 {
-	int **gridout;
-	int i, j;
+	char *strout;
+	unsigned int i, j, k, limit;
 
-	if (width < 1 || height < 1)
-		return (NULL);
-	gridout = malloc(height * sizeof(int *));
-	if (gridout == NULL)
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+	for (j = 0; s2[j] != '\0'; j++)
+		;
+	strout = malloc(sizeof(char) * (i + j + 1));
+	if (strout == NULL)
 	{
-		free(gridout);
+		free(strout);
 		return (NULL);
 	}
-	for (i = 0; i < height; i++)
-	{
-		gridout[i] = malloc(width * sizeof(int));
-		if (gridout[i] == NULL)
-		{
-			for (i--; i >= 0; i--)
-				free(gridout[i]);
-			free(gridout);
-			return (NULL);
-		}
-	}
-	for (i = 0; i < height; i++)
-		for (j = 0; j < width; j++)
-			gridout[i][j] = 0;
-	return (gridout);
+	for (k = 0; k < i; k++)
+		strout[k] = s1[k];
+	limit = j;
+	for (j = 0; j <= limit; k++, j++)
+		strout[k] = s2[j];
+	return (strout);
 }
